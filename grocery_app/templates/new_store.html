@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>New Store</h1>
+
+<form method="POST" action="{{url_for('main.new_store')}}">
+    {{ form.csrf_token }}
+    <legend>Please enter your information:</legend>
+    <fieldset>
+    {% include "store_form.html" %}
+    </fieldset>
+</form>
+
+
+{% endblock %}
